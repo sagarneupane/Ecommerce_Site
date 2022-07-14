@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fashi Template">
+    <meta name="keywords" content="Fashi, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NEUPANE FANCY | NFS</title>
+    {% include 'base/css.html' %}
+</head>
+
+<body>
+    {% comment %} <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div> {% endcomment %}
+
+    <!-- Header Section Begin -->
+
+    {% include 'base/header.html' %}
+
+    <!-- Header End -->
+    {% block content %}
+
+    {% endblock content %}
+
+    <!-- Partner Logo Section Begin -->
+    {% include 'base/partnerlogo.html' %}
+    <!-- Partner Logo Section End -->
+
+    {% comment %}Footer Seciton {% endcomment %}
+    {% include 'base/footer.html' %}
+
+
+    {% include 'base/script.html' %}
+</body>
+
+</html>
