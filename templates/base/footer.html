@@ -8,12 +8,12 @@
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a>
+                            <a href="#"><img src="{{logo_details.logo_image.url}}" alt="" height="50px" width="200px"></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
+                            <li>Address: {{contact.address_line_1}}</li>
+                            <li>Phone: {{contact.contact_1}}</li>
+                            <li>Email: {{contact.email_1}}</li>
                         </ul>
                         <div class="footer-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>

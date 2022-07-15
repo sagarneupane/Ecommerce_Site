@@ -1,8 +1,6 @@
 {% extends 'base/base.html' %}
 
-
 {% block content %}
-
 
     <!-- Breadcrumb Section Begin -->
     <div class="breacrumb-section">
@@ -24,7 +22,7 @@
         <div class="container">
             <div class="map-inner">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.8201540096625!2d81.68062661502604!3d28.182384482597612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399865ece0d394bb%3A0x107693521d829369!2sNeupane%20Fancy%20Store!5e0!3m2!1sen!2snp!4v1657784563319!5m2!1sen!2snp"
+                    src="{{contact.google_embedding_link}}"
                     height="610" style="border:0" allowfullscreen="">
                 </iframe>
                 <div class="icon">
@@ -52,7 +50,7 @@
                             </div>
                             <div class="ci-text">
                                 <span>Address:</span>
-                                <p>60-49 Road 11378 New York</p>
+                                <p>{{contact.address_line_1}}</p>
                             </div>
                         </div>
                         <div class="cw-item">
@@ -61,7 +59,10 @@
                             </div>
                             <div class="ci-text">
                                 <span>Phone:</span>
-                                <p>+65 11.188.888</p>
+                                <p>{{contact.contact_1}}</p>
+                                {% if contact.contact_2 %}
+                                <p>{{contact.contact_2}}</p>
+                                {%endif%}
                             </div>
                         </div>
                         <div class="cw-item">
@@ -70,7 +71,7 @@
                             </div>
                             <div class="ci-text">
                                 <span>Email:</span>
-                                <p>hellocolorlib@gmail.com</p>
+                                <p>{{contact.email_1}}</p>
                             </div>
                         </div>
                     </div>

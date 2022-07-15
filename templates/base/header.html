@@ -17,11 +17,11 @@
             <div class="ht-left">
                 <div class="mail-service">
                     <i class=" fa fa-envelope"></i>
-                    hello.colorlib@gmail.com
+                    {{contact.email_1}}
                 </div>
                 <div class="phone-service">
                     <i class=" fa fa-phone"></i>
-                    +65 11.188.888
+                   {{contact.contact_1}}
                 </div>
             </div>
             <div class="ht-right">
@@ -53,7 +53,8 @@
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
                         <a href="{% url 'dashboard'%}">
-                            <img src="{% static 'img/logo.png' %}" alt="">
+                            {% comment %} <a href="{{}}">ASgar</a> {% endcomment %}
+                            <img src="{{logo_details.logo_image.url}}" alt="" height="50px" width="250px">
                         </a>
                     </div>
                 </div>
