@@ -5,6 +5,7 @@ from django.core.validators import MaxValueValidator,MinValueValidator
 # Create your models here.
 class Logo(models.Model):
     logo_name = models.CharField(max_length=10)
+    # 88 X 23 
     logo_image = ContentRestrictionFileField(
         upload_to="logo/",
         max_upload_size =1000000,
@@ -43,13 +44,18 @@ class CarosulData(models.Model):
     description = models.TextField()
     date_added = models.DateField(auto_now_add=True)
     date_edited = models.DateField(auto_now=True)
+    
+    # 1920 X 720
     headline_image = ContentRestrictionFileField(
     upload_to="carosul/",
     max_upload_size =1000000,
     content_types=["image/jpeg", "image/png", "image/JPG", "image/jpg"],
+    width=1920,
+    height = 720,
     null=True,
     blank=True,
     default=None,
+    max_length=500,
     )
     special_offer = models.CharField(max_length=255)
     active_status = models.BooleanField()
