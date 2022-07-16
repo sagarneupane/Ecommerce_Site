@@ -1,9 +1,9 @@
 from django.template.defaultfilters import filesizeformat
-from django.db.models import FileField
+from django.db.models import FileField,ImageField
 from django.forms import forms
 from django.core.files.images import get_image_dimensions
 
-class ContentRestrictionFileField(FileField):
+class ContentRestrictionFileField(ImageField):
     
     def __init__(self,*args,**kwargs):
         self.content_types = kwargs.pop("content_types",[])

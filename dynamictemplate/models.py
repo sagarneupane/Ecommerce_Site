@@ -2,6 +2,12 @@ from django.db import models
 from dynamictemplate.filefield import ContentRestrictionFileField
 from django.core.validators import MaxValueValidator,MinValueValidator
 
+
+"""
+Note : When you use ContentRestrictionFileField height and width are optional field to be added .
+if you don't specify them then thei value is by default treated as 0 and there will be no check in dimensions of the image File
+
+"""
 # Create your models here.
 class Logo(models.Model):
     logo_name = models.CharField(max_length=10)
